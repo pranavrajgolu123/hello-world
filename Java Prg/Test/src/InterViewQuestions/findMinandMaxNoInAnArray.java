@@ -1,4 +1,4 @@
-package ThreadProgram.Array;
+package InterViewQuestions;
 
 public class findMinandMaxNoInAnArray {
 	int arr1[]= {1,4,7,8,9,10,3,2};

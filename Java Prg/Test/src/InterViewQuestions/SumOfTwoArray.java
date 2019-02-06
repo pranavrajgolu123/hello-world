@@ -1,4 +1,4 @@
-package ThreadProgram.Array;
+package InterViewQuestions;
 
 import java.io.BufferedReader;
 import java.io.IOException;

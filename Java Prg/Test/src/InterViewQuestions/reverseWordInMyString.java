@@ -1,9 +1,9 @@
-package ThreadProgram.Array;
+package InterViewQuestions;
 
 public class reverseWordInMyString {
 	
 	
-	public void reverseWordInMyString(String str)
+	public void reverseWordInMyString1(String str)
 	   {
 		/* The split() method of String class splits
 		 * a string in several strings based on the
@@ -31,8 +31,8 @@ public class reverseWordInMyString {
 	   {
 		reverseWordInMyString obj=new reverseWordInMyString();
 		String str="The quick brown fox jumps over the lazy dog.";
-		obj.reverseWordInMyString(str);
-		obj.reverseWordInMyString("This is an easy Java Program");
+		obj.reverseWordInMyString1(str);
+		obj.reverseWordInMyString1("This is an easy Java Program");
 
 	   }
 	}

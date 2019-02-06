@@ -1,4 +1,4 @@
-package ThreadProgram.Array;
+package InterViewQuestions;
 import java.util.Scanner;
 public class PalindromNo {
 
@@ -11,7 +11,6 @@ public class PalindromNo {
 		int temp=num;
 		while (num > 0) {
 			a = num % 10;
-
 			c = (c * 10)+a;
 			num = num / 10;
 		}

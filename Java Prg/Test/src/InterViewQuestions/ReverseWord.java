@@ -1,11 +1,10 @@
-package ThreadProgram.Array; 
+package InterViewQuestions; 
   
-public class wordReverse 
+class GFG 
 { 
-static String wordReverse1(String str) 
+static String wordReverse(String str) 
 { 
     int i = str.length() - 1; 
-    System.out.println("i value is: "+i);
     int start, end = i + 1; 
     String result = ""; 
       
@@ -14,31 +13,31 @@ static String wordReverse1(String str)
         if(str.charAt(i) == ' ') 
         { 
             start = i + 1; 
-            System.out.println("start value is: "+start);
             while(start != end) 
                 result += str.charAt(start++); 
-            System.out.println("result value is: "+result);
+              
             result += ' '; 
               
             end = i; 
-            System.out.println("end value is: "+end);
         } 
         i--; 
     } 
       
     start = 0; 
     while(start != end) 
-    {
         result += str.charAt(start++); 
-    }
+      
     return result; 
-}
+} 
   
 // Driver code 
 public static void main(String[] args) 
 { 
-    String str = "Pranav is a good boy"; 
-    System.out.print(wordReverse1(str)); 
+    String str = "I AM A GEEK"; 
+      
+    System.out.print(wordReverse(str)); 
 } 
 } 
-
+  
+// This code is contributed  
+// by Akanksha Rai(Abby_akku) 

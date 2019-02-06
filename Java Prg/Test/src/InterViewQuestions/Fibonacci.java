@@ -1,4 +1,4 @@
-package ThreadProgram.Array;
+package InterViewQuestions;
 
 public class Fibonacci {
  
