@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.7.0//EN" "http://gwtproject.org/doctype/2.7.0/gwt-module.dtd">
+<module rename-to='forsaos'>
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name="com.gwtplatform.mvp.MvpWithEntryPoint" />
+	<inherits name="com.google.gwt.resources.Resources" />
+	<inherits name="com.sksamuel.gwt.GwtWebsockets" />
+	<extend-configuration-property name="gin.ginjector.modules" value="com.fmlb.forsaos.client.gin.ClientModule" />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+	<!--GWT Material -->
+	<inherits name="gwt.material.design.GwtMaterialWithJQuery" />
+	<inherits name="gwt.material.design.themes.ThemeBlue" />
+	<inherits name="gwt.material.design.addins.GwtMaterialAddins" />
+	<inherits name="gwt.material.design.GwtMaterialTable" />
+
+	<inherits name="com.google.gwt.logging.Logging" />
+	<inherits name="com.googlecode.gwt.crypto.Crypto" />
+
+	<set-configuration-property name="CssResource.enableGss" value="true" />
+	<set-configuration-property name="CssResource.conversionMode" value="lenient" />
+	<collapse-all-properties value="true" />
+	<add-linker name="xsiframe" />
+</module>

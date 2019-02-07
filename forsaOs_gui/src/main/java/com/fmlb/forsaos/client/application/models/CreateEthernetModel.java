@@ -1,0 +1,13 @@
+package com.fmlb.forsaos.client.application.models;
+
+import java.io.Serializable;
+
+public class CreateEthernetModel extends CreateNetworkModel implements Serializable 
+{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+}

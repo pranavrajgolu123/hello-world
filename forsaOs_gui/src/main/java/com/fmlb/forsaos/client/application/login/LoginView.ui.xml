@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:ma="urn:import:gwt.material.design.addins.client" xmlns:m="urn:import:gwt.material.design.client.ui" xmlns:incubator="urn:import:gwt.material.design.incubator.client" xmlns:m.addins="urn:import:gwt.material.design.addins.client">
+	<ui:with field="loginResources" type="com.fmlb.forsaos.client.resources.LoginResources" />
+	<ui:with field="appResources" type="com.fmlb.forsaos.client.resources.AppResources" />
+	<m:MaterialRow addStyleNames="{loginResources.style.login_bg}">
+		<m:MaterialImage resource="{appResources.formulusLogo}" addStyleNames="{loginResources.style.f_logo} " />
+		<m:MaterialRow addStyleNames="{loginResources.style.login_box}">
+			<m:MaterialColumn>
+				<m:MaterialPanel addStyleNames="{loginResources.style.panel}">
+					<m:MaterialPanel addStyleNames="{loginResources.style.fieldPanel}">
+
+						<!-- <m:MaterialImage resource="{appResources.ForsaOSLogo}" addStyleNames="{loginResources.style.i2_logo}" /> -->
+						
+						<m:MaterialRow addStyleNames="{loginResources.style.i2_logo_panel}">
+							<m:MaterialImage resource="{appResources.ForsaOSLogo}" addStyleNames="{loginResources.style.i2_logo}" />
+						</m:MaterialRow>
+						
+						<m:MaterialLabel text="Login" addStyleNames="{loginResources.style.login_txt}" />
+						<m:MaterialTextBox type="EMAIL" ui:field="username" placeholder="Username" addStyleNames="{loginResources.style.login_input}" />
+						<!-- <m:MaterialLabel text="invalid" addStyleNames="{loginResources.style.invalid_txt}" />  -->
+						<m:MaterialTextBox type="PASSWORD" ui:field="password" placeholder="Password" addStyleNames="{loginResources.style.password_input}" />
+						<m:MaterialLabel ui:field="errorLabel" text="invalid" addStyleNames="{loginResources.style.invalid_txt}" />
+						<m:MaterialButton ui:field="btnLogin" addStyleNames="{loginResources.style.login_btn}" waves="LIGHT" text="Submit" width="100%" />
+
+						<!-- <m:MaterialRow> <m:MaterialColumn addStyleNames="{loginResources.style.logged_txt}"> 
+							<m:MaterialCheckBox text="Keep me logged in" /> </m:MaterialColumn> </m:MaterialRow> -->
+					</m:MaterialPanel>
+				</m:MaterialPanel>
+			</m:MaterialColumn>
+		</m:MaterialRow>
+	</m:MaterialRow>
+</ui:UiBinder>

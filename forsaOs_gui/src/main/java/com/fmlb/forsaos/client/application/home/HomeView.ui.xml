@@ -1,0 +1,208 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'
+	xmlns:m="urn:import:gwt.material.design.client.ui"
+	xmlns:ma="urn:import:gwt.material.design.addins.client">
+
+	<ui:with field="appResources"
+		type="com.fmlb.forsaos.client.resources.AppResources" />
+
+	<m:MaterialPanel>
+		<m:MaterialHeader ui:field="header">
+		<m:MaterialNavBar activates="sidenavColaps"
+				backgroundColor="WHITE" addStyleNames="{appResources.style.collapse_icon}">
+          <m:MaterialNavBrand ui:field="appTitle" float="LEFT" text="Title" addStyleNames="{appResources.style.nav_brand_title}" />
+          <m:MaterialNavSection float="RIGHT" marginRight="10" >
+            <m:MaterialTooltip text="BLINK IN PROGRESS">
+               <m:MaterialPreLoader ui:field="blinkStatusLoader" margin="8">
+                 <m:MaterialSpinner />
+             </m:MaterialPreLoader>
+            </m:MaterialTooltip>
+           <!--  <m:MaterialTooltip text="NOTIFICATIONS">
+              <m:MaterialLink iconType="NOTIFICATIONS" textColor="WHITE" waves="LIGHT" addStyleNames="{appResources.style.nav_notification}"/>
+            </m:MaterialTooltip> -->
+            <m:MaterialLink iconType="ACCOUNT_CIRCLE"  iconPosition="LEFT" text="Admin" textColor="WHITE" waves="LIGHT" 
+            addStyleNames="{appResources.style.nav_account}" ui:field="userNameTitle"/>
+            <m:MaterialLink iconType="ARROW_DROP_DOWN" activates="userOptions" iconPosition="LEFT"  textColor="WHITE" addStyleNames="{appResources.style.nav_account_arrow}"/> 
+            <m:MaterialLink iconType="POWER_SETTINGS_NEW" activates="powerOptions" iconPosition="LEFT"  textColor="WHITE" addStyleNames="{appResources.style.nav_account_arrow}"/> 
+          </m:MaterialNavSection>
+        </m:MaterialNavBar>
+		</m:MaterialHeader>
+<m:MaterialDropDown activator="userOptions" constrainWidth="true" belowOrigin="true" hover="true" addStyleNames="{appResources.style.dashbaord_userOptions}">
+ <m:MaterialLink ui:field="logoutLink" waves="DEFAULT" textColor="BLACK" text="Logout" />
+ </m:MaterialDropDown>
+ 
+ <!-- <m:MaterialDropDown activator="powerOptions" constrainWidth="true" belowOrigin="true" hover="true" addStyleNames="{appResources.style.dashbaord_userOptions}"> -->
+ <m:MaterialDropDown activator="powerOptions" constrainWidth="true" belowOrigin="true" hover="true" class="dashboard_power_option">
+ <m:MaterialLink ui:field="shutdownForsaOsLink" waves="DEFAULT" textColor="BLACK" text="Shutdown ForsaOS" />
+ <m:MaterialLink ui:field="restartForsaOsLink" waves="DEFAULT" textColor="BLACK" text="Restart ForsaOS" />
+ <m:MaterialLink ui:field="shutdownSystemLink" waves="DEFAULT" textColor="BLACK" text="Shutdown Host" />
+ <m:MaterialLink ui:field="restartSystemLink" waves="DEFAULT" textColor="BLACK" text="Restart Host" />
+ </m:MaterialDropDown>
+		<m:MaterialSideNavPush m:id="sidenavColaps"
+			ui:field="sideNav" width="230" addStyleNames="{appResources.style.left_nav}">
+			<ma:sideprofile.MaterialSideProfile addStyleNames="{appResources.style.i2_logo_bar}">
+				<m:MaterialImage
+			resource="{appResources.Forsa_Dashboard_Logo}"
+			addStyleNames="{appResources.style.i2_logo}" />
+			</ma:sideprofile.MaterialSideProfile>
+			
+			<!-- <ma:sideprofile.MaterialSideProfile
+				 url="http://static1.squarespace.com/static/51609147e4b0715db61d32b6/521b97cee4b05f031fd12dde/5519e33de4b06a1002802805/1431718693701/?format=1500w"> 
+				<m:MaterialImage url="http://b.vimeocdn.com/ps/339/488/3394886_300.jpg" 
+					/>
+				<m:MaterialLabel text="i2" textColor="WHITE"
+					fontSize="85px" />
+				
+				<m:MaterialLink text="gwt-material@gmail.com" activates="dropProfile" 
+					iconType="ARROW_DROP_DOWN" iconPosition="RIGHT" textColor="WHITE" />
+			</ma:sideprofile.MaterialSideProfile> -->
+			<m:MaterialCollapsible >
+				<!-- PARENT 0 -->
+				<m:MaterialCollapsibleItem>
+					<m:MaterialCollapsibleHeader
+						waves="DEFAULT">
+						<!-- <m:MaterialImage
+						resource="{appResources.dashboard_icon}" /> -->
+						<m:MaterialLink text="Dashboard" ui:field="dashboardLink" addStyleNames="{appResources.style.left_menu_dashboard_icon}" />
+					</m:MaterialCollapsibleHeader>
+					<!-- <m:MaterialCollapsibleBody>
+						<m:html.UnorderedList>
+						<m:MaterialButton ui:field="btnLogin"
+								waves="LIGHT" text="Log In" width="100%" />
+							<m:MaterialLink ui:field="repoLink" iconType="POLYMER"
+								text="Repository" waves="DEFAULT" />
+							<m:MaterialLink iconType="POLYMER" text="Blink"
+								waves="DEFAULT" />
+							<m:MaterialLink iconType="POLYMER"
+								text="Scheduler" waves="DEFAULT" />
+						</m:html.UnorderedList>
+					</m:MaterialCollapsibleBody> -->
+				</m:MaterialCollapsibleItem>
+				<!-- PARENT 1 -->
+				<m:MaterialCollapsibleItem>
+					<m:MaterialCollapsibleHeader
+						waves="DEFAULT">
+						<!-- <m:MaterialImage
+						resource="{appResources.management_icon}" /> -->
+						<m:MaterialLink text="Management" ui:field="manageLink" addStyleNames="{appResources.style.left_menu_management_icon}" />
+					</m:MaterialCollapsibleHeader>
+					<m:MaterialCollapsibleBody>
+						<m:html.UnorderedList>
+							<m:MaterialLink ui:field="managemetBlinkLink" text="Blink" waves="DEFAULT" />
+							<m:MaterialLink ui:field="networkingLink" text="Networking" waves="DEFAULT" />
+							<m:MaterialLink ui:field="partitionLink" text="Partitions" waves="DEFAULT" />
+							<m:MaterialLink ui:field="repoLink" text="Repository" waves="DEFAULT" />
+							<m:MaterialLink ui:field="schedulerLink" text="Scheduler" waves="DEFAULT" />
+						</m:html.UnorderedList>
+					</m:MaterialCollapsibleBody>
+				</m:MaterialCollapsibleItem>
+				<!-- PARENT 2 -->
+				<m:MaterialCollapsibleItem>
+					<m:MaterialCollapsibleHeader
+						waves="DEFAULT">
+						<!-- <m:MaterialImage
+						resource="{appResources.virtualization}" /> -->
+						<m:MaterialLink text="Virtualization" ui:field="virtLink" addStyleNames="{appResources.style.left_menu_virtualization_icon}" />
+					</m:MaterialCollapsibleHeader>
+					<m:MaterialCollapsibleBody>
+						<m:html.UnorderedList>
+							<m:MaterialLink  ui:field="rtmLink" text="RTM"
+								waves="DEFAULT" />
+							<m:MaterialLink ui:field="lemLink"  text="LEMS"
+								waves="DEFAULT" />
+							<m:MaterialLink ui:field="vmLink" text="VMS"
+								waves="DEFAULT" />
+						</m:html.UnorderedList>
+					</m:MaterialCollapsibleBody>
+				</m:MaterialCollapsibleItem>
+				<!-- PARENT 3 -->
+				<m:MaterialCollapsibleItem>
+					<m:MaterialCollapsibleHeader
+						waves="DEFAULT">
+						<!-- <m:MaterialImage
+						resource="{appResources.diagnostics_icon}" /> -->
+						<m:MaterialLink text="Diagnostics" ui:field="diagLink" addStyleNames="{appResources.style.left_menu_diagnostics_icon}" />
+					</m:MaterialCollapsibleHeader>
+					<m:MaterialCollapsibleBody>
+						<m:html.UnorderedList>
+							<m:MaterialLink ui:field="diagStatusLink" text="Status" waves="DEFAULT" />
+							<!-- <m:MaterialLink ui:field="diagMACAddrsLink" text="MAC Addresses" waves="DEFAULT" /> -->
+							<m:MaterialLink ui:field="diagSMTPLink" text="SMTP Alerts" waves="DEFAULT" />
+						</m:html.UnorderedList>
+					</m:MaterialCollapsibleBody>
+				</m:MaterialCollapsibleItem>
+				<!-- <m:MaterialCollapsibleItem>
+					<m:MaterialCollapsibleHeader
+						waves="DEFAULT">
+						<m:MaterialImage
+						resource="{appResources.reporting_icon}" />
+						<m:MaterialLink text="Reporting" ui:field="reportingLink" addStyleNames="{appResources.style.left_menu_reporting_icon}" />
+					</m:MaterialCollapsibleHeader>
+					<m:MaterialCollapsibleBody>
+						<m:html.UnorderedList>
+							<m:MaterialLink text="Child 1" waves="DEFAULT" />
+							<m:MaterialLink text="Child 2" waves="DEFAULT" />
+						</m:html.UnorderedList>
+					</m:MaterialCollapsibleBody>
+				</m:MaterialCollapsibleItem> -->
+				<m:MaterialCollapsibleItem>
+					<m:MaterialCollapsibleHeader
+						waves="DEFAULT">
+						<!-- <m:MaterialImage
+						resource="{appResources.eventLog_icon}" /> -->
+						<m:MaterialLink text="Event Log" ui:field="eventLogLink" addStyleNames="{appResources.style.left_menu_eventLog_icon}" />
+					</m:MaterialCollapsibleHeader>
+					<!-- <m:MaterialCollapsibleBody>
+						<m:html.UnorderedList>
+							<m:MaterialLink text="Child 1" waves="DEFAULT" />
+							<m:MaterialLink text="Child 2" waves="DEFAULT" />
+						</m:html.UnorderedList>
+					</m:MaterialCollapsibleBody> -->
+				</m:MaterialCollapsibleItem>
+				<m:MaterialCollapsibleItem>
+					<m:MaterialCollapsibleHeader
+						waves="DEFAULT">
+						<!-- <m:MaterialImage
+						resource="{appResources.settings_icon}" /> -->
+						<m:MaterialLink text="Settings" ui:field="settingsLink" addStyleNames="{appResources.style.left_menu_settings_icon}" />
+					</m:MaterialCollapsibleHeader>
+					<m:MaterialCollapsibleBody>
+						<m:html.UnorderedList>
+							<m:MaterialLink ui:field="settingsSystemLink" text="Host" waves="DEFAULT" />
+							<m:MaterialLink ui:field="settingsAccountsLink" text="Accounts" waves="DEFAULT" />
+							<m:MaterialLink ui:field="settingsLicenseManagerLink" text="License Manager" waves="DEFAULT" />
+							<!-- <m:MaterialLink ui:field="settingsSecurityLink" text="Security" waves="DEFAULT" /> -->
+						</m:html.UnorderedList>
+					</m:MaterialCollapsibleBody>
+				</m:MaterialCollapsibleItem>
+			</m:MaterialCollapsible>
+		</m:MaterialSideNavPush>
+
+		<m:MaterialContainer ui:field="pageContainer">
+			<m:MaterialRow textAlign="CENTER" paddingTop="40">
+				<m:MaterialImage
+					url="http://i.imgur.com/7JpG0F4.gif" />
+				<m:MaterialFAB>
+					<m:MaterialButton type="FLOATING"
+						href="https://github.com/GwtMaterialDesign/gwt-material-patterns/blob/release_2.0/src/main/java/com/github/gwtmaterialdesign/client/application/sidenavdrawer/DrawerSideNavView.ui.xml"
+						target="_blank" backgroundColor="PINK" size="LARGE"
+						iconType="CODE" />
+				</m:MaterialFAB>
+			</m:MaterialRow>
+		</m:MaterialContainer>
+		<m:MaterialFooter ui:field="footer" addStyleNames="{appResources.style.footer_box}" grid="s12">
+			<m:MaterialPanel grid="s4">
+				<m:MaterialLabel text="© 2018 Copyright" addStyleNames="{appResources.style.footer_txt}" />
+			</m:MaterialPanel>
+			<m:MaterialPanel grid="s4" addStyleNames="{appResources.style.footerDate}">
+				<m:MaterialIcon iconType="TIMELAPSE" iconSize="SMALL" />
+				<m:MaterialLabel ui:field="sysUpTime" text="NA" />
+			</m:MaterialPanel>
+			<m:MaterialPanel grid="s4" addStyleNames="{appResources.style.footerDate}">
+				<m:MaterialIcon iconType="ACCESS_TIME" iconSize="SMALL" />
+				<m:MaterialLabel ui:field="serverTime" text="NA" />
+			</m:MaterialPanel>
+		</m:MaterialFooter>
+	</m:MaterialPanel>
+</ui:UiBinder>
+	

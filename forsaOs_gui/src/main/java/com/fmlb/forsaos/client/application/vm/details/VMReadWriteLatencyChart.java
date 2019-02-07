@@ -1,0 +1,153 @@
+package com.fmlb.forsaos.client.application.vm.details;
+
+import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.core.client.JsArray;
+
+public class VMReadWriteLatencyChart
+{
+	public static native JavaScriptObject drawVMReadWriteLatencyChart( String id )
+	/*-{
+		var chart = $wnd.AmCharts.makeChart(id, {
+			"type" : "stock",
+			"theme" : "light",
+			"glueToTheEnd" : true,
+			"categoryAxesSettings" : {
+				"startOnAxis" : true,
+				"axisColor" : "#DADADA",
+				"gridAlpha" : 0.07,
+				"parseDates" : true,
+				"minPeriod" : "fff",
+				"dateFormats" : [ {
+					period : 'fff',
+					format : 'JJ: NN: SS'
+				}, {
+					period : 'ss',
+					format : 'JJ: NN: SS'
+				}, {
+					period : 'mm',
+					format : 'JJ: NN'
+				}, {
+					period : 'hh',
+					format : 'JJ: NN'
+				}, {
+					period : 'DD',
+					format : 'MM/DD/YYYY'
+				},
+				//you may need to change the entries for 'WW' and 'MM' as well, depending on the amount of visibledata
+				{
+					period : 'WW',
+					format : 'MMMDD'
+				}, {
+					period : 'MM',
+					format : 'MMM'
+				}, {
+					period : 'YYYY',
+					format : 'YYYY'
+				} ]
+			},
+			"valueAxesSettings" : {
+				"axisAlpha" : 0.2,
+				"dashLength" : 1,
+				"position" : "left",
+				"usePrefixes" : false
+			},
+			"dataSets" : [ {
+				"fieldMappings" : [ {
+					"fromField" : "rd_latency_nsec",
+					"toField" : "rd_latency_nsec"
+				}, {
+					"fromField" : "wr_latency_nsec",
+					"toField" : "wr_latency_nsec"
+				} ],
+				"dataProvider" : [],
+				"categoryField" : "timestamp"
+			} ],
+			"panels" : [ {
+				"valueAxes" : [ {
+					"labelFunction" : function(value, valueText, valueAxis) {
+						return formatNanoSec(value);
+					},
+				} ],
+				"stockGraphs" : [ {
+					"id" : "g1",
+					"title" : "Read Latency",
+					"lineColor" : "#0084ff",
+					"useDataSetColors" : false,
+					"fillAlphas" : 0.7,
+					//Here the value field needs to be changed based on correct data received
+					"valueField" : "rd_latency_nsec",
+					"balloonFunction" : function(item) {
+						return "Read Latency: <b>" + formatNanoSec(item.values.value) + "</b>";
+					}
+				}, {
+					"id" : "g2",
+					"title" : "Write Latency",
+					"lineColor" : "#fb954f",
+					"useDataSetColors" : false,
+					"fillAlphas" : 0.7,
+					//Here the value field needs to be changed based on correct data received
+					"valueField" : "wr_latency_nsec",
+					"balloonFunction" : function(item) {
+						return "Write Latency: <b>" + formatNanoSec(item.values.value) + "</b>";
+					}
+				} ],
+				"stockLegend" : {
+					"position" : "bottom",
+					"valueFunction" : function(graphDataItem, valueText) {
+						  if (valueText !== " ") {
+	        						return formatNanoSec(
+	          						graphDataItem.dataContext.dataContext[graphDataItem.graph.valueField]);
+	      				} else {
+	        					return valueText;
+	      				}
+					}
+				}
+			} ],
+			"chartScrollbarSettings" : {
+				"graph" : "g1"
+			},
+			"chartCursorSettings" : {
+				"valueBalloonsEnabled" : true,
+				"graphBulletSize" : 1,
+				//"valueLineBalloonEnabled": true,
+				//"valueLineEnabled": true,
+				"valueLineAlpha" : 0.5
+			},
+			"panelsSettings" : {
+			//"usePrefixes": true
+			},
+			"export" : {
+				"enabled" : true
+			}
+		});
+		
+		
+		function formatNanoSec(value) {
+				var divisor = 1;
+		 		var scaleLabels = [ "ns", "micros", "ms", "s"];
+		 		var x = 0;
+				while ( ( value / divisor ) >= 1000 )
+				{
+						divisor = divisor * 1000;
+						x++;
+				}
+	       		return Math.round(value / divisor * 100) / 100 + " " +scaleLabels[x];
+	    }
+	      	
+		return chart;
+	}-*/;
+
+	public static native void setData( JavaScriptObject chart, JsArray<JavaScriptObject> data )
+	/*-{
+		chart.dataSets[0].dataProvider = data;
+		chart.validateData();
+		chart.validateNow();
+	}-*/;
+
+	public static native void setIncrementalData( JavaScriptObject chart, JsArray<JavaScriptObject> data )
+	/*-{
+		chart.dataSets[0].dataProvider.push(data);
+		chart.validateData();
+	}-*/;
+
+}

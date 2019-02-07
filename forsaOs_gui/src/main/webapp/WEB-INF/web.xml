@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    
+	<servlet>
+		<servlet-name>commonServlet</servlet-name>
+		<servlet-class>com.fmlb.forsaos.server.CommonServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>commonServlet</servlet-name>
+		<url-pattern>/forsaos/common</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Guacamole Tunnel Servlet -->
+    <servlet>
+        <description>Tunnel servlet.</description>
+        <servlet-name>Tunnel</servlet-name>
+        <servlet-class>
+            com.fmlb.forsaos.server.vnc.console.VNCGuacamoleTunnelServlet
+        </servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Tunnel</servlet-name>
+        <url-pattern>/tunnel</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>rest</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>rest</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+</web-app>
