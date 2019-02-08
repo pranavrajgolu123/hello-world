@@ -1,5 +1,8 @@
 package InterViewQuestions;
 
+/*#### input=10
+#### output=0 1 1 2 3 5 8 13 21 34
+		   0 1 1 2 3 5 8 13 21 34 */
 public class Fibonacci {
  
 	 static int n1=0,n2=1,n3=0;    
@@ -28,6 +31,7 @@ public class Fibonacci {
 		  System.out.print(n1+" "+n2);//printing 0 and 1    
 		  printFibonacci(count-2);//n-2 because 2 numbers are already printed  
 		  Fibonacci t=new Fibonacci();
+		  System.out.println();
 		  t.withoutRecursion(count);
 	}
 }

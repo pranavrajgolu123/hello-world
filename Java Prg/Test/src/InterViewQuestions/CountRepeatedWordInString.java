@@ -1,7 +1,10 @@
 package InterViewQuestions;
 
 public class CountRepeatedWordInString {
-	
+/*input="Pranav raj Pranav"
+
+output= Pranav= 2
+ 	    raj= 1*/
 	public static void main(String arf[]) {
 		
 		String str="Pranav raj Pranav";

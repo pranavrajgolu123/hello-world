@@ -1,7 +1,11 @@
 package InterViewQuestions;
 
 import java.util.Scanner;
-
+/*input=Pranav
+output=a=2
+n=1
+p=1
+r=1*/
 public class CountRepeatedCharInString {
 
 	public static void main(String args[]) {

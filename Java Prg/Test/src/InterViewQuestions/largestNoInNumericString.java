@@ -13,13 +13,11 @@ public class largestNoInNumericString {
 		System.out.println(i);
 		   while (n > 0) {
 	            r1 = n % 10;
-	            System.out.println("r1: "+r1); 
 	            if (Id1 < r1) {
-	            	System.out.println("id: "+Id1); 
+
 	                Id1 = r1;
 	            }
 	            n = n / 10;
-	           System.out.println("n: "+n); 
 	        }
 		   
 		   System.out.println(Id1);   

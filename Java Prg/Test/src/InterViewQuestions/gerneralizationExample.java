@@ -6,7 +6,7 @@ public class gerneralizationExample {
 	one obj=new two();
 	two obj1=(two)obj;
 	one.show1();
-//	obj1.show1();
+    obj1.show1();
 
 	}
 }

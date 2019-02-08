@@ -4,26 +4,34 @@ import java.util.Scanner;
 
 public class factorialNumber {
 
-	static long usingRescursion(int num) {
-		long fact;
-		if(num == 1) return 1;
-		fact=usingRescursion(num-1)*num;
-		//System.out.println("using recursion"+fact);
-		return fact;
-	}
+
 	
 	public static void main(String arg[]) {
 		int fact=1;
 		
 		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the no:  ");
 		int num = Integer.parseInt(input.nextLine());
+	    int factorial = fact(num);
+		System.out.println("using recursion:  "+factorial);
 		while(num>0) {
 			fact=fact * num;
 			num--;
 		}
-		System.out.println(fact);
-		System.out.println(factorialNumber.usingRescursion(num));
+		System.out.println("fact no=  "+fact);
+		
 		
 	}
+	
+	 static int fact(int n)
+	   {
+	       int output;
+	       if(n==1){
+	         return 1;
+	       }
+	       //Recursion: Function calling itself!!
+	       output = fact(n-1)* n;
+	       return output;
+	   }
 
 }
