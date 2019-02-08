@@ -1,17 +1,16 @@
 package CollectionProgram;
 
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Hashtable;
 import java.util.Scanner;
 import java.util.Set;
 
-public class HashMapDemo {
-	
+public class HashTableDemo {
 	public static void main(String arg[]) {
-	
-		HashMap<String, Long> hm=new HashMap<String, Long>();
+		
+		Hashtable<String, Long> hT=new Hashtable<String, Long>();
 		
 		String name,str;
 		Long pNo;
@@ -34,24 +33,24 @@ public class HashMapDemo {
                     System.out.println("Enter Your Phone no");
                     str=input.nextLine();
                     pNo=new Long(str);
-                    hm.put(name, pNo);
+                    hT.put(name, pNo);
                     break;
                     
             case 2: System.out.println("Enter your name");
             name=input.nextLine();
             name=name.trim();
-            pNo=hm.get(name);
+            pNo=hT.get(name);
             System.out.println("your no"+pNo);
             break;
             
             case 3: Set<String> set=new HashSet<String>();
-                   set=hm.keySet();
+                   set=hT.keySet();
                    System.out.println(set);
                    break;
                    
             case 4: 
             Collection<Long> value=new HashSet<Long>();
-            value=hm.values();
+            value=hT.values();
             System.out.println(value);
             break;
                     
