@@ -9,7 +9,7 @@ public class Client2 {
 	
 	public static void main(String ar[]) throws Exception {
 		
-		Socket s=new Socket("localhost", 8888);
+		Socket s=new Socket("localhost", 7643);
 		
 		DataOutputStream dom=new DataOutputStream(s.getOutputStream());
 		
@@ -21,7 +21,7 @@ public class Client2 {
 			str2=br.readLine();
 			System.out.println(str2);
 		}
-	
+		
 		dom.close();
 		br.close();
 		kb.close();

@@ -10,7 +10,7 @@ public class Server2 {
 
 	public static void main(String arg[]) throws Exception{
 		
-		ServerSocket st=new ServerSocket(8888);
+		ServerSocket st=new ServerSocket(7643);
 		
 		Socket s=st.accept();
 		

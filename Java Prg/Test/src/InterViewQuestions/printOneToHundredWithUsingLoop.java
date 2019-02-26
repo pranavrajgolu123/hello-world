@@ -1,6 +1,6 @@
 package InterViewQuestions;
 
-public class printOneToHundredWithUsingLoop {
+public class PrintOneToHundredWithUsingLoop {
 	
 	static int i=100;
 	static int j=0;
@@ -13,6 +13,6 @@ public class printOneToHundredWithUsingLoop {
 	}
 
 	public static void main(String r[]) {
-		printOneToHundredWithUsingLoop.num();
+		PrintOneToHundredWithUsingLoop.num();
 	}
 }

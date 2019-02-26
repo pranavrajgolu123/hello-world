@@ -18,9 +18,11 @@ public class StackDemo {
 		System.out.println("1. Push Element");
 		System.out.println("2. Pop Element");
 		System.out.println("3. Search Element");
+		System.out.println("4. Check Stack is Empty or not");
+		System.out.println("5. Exit");
 
 		
-		while(choice < 4)
+		while(choice < 5)
 		{
 		System.out.println("Enter your Choice");
 		choice=Integer.parseInt(br.nextLine());
@@ -53,10 +55,19 @@ public class StackDemo {
 				}				
 				break;
 				
+				case 4:
+					boolean obj1=st.isEmpty();
+					if(obj1 == true) {
+					System.out.println("The Stack is Empty");			}	
+					else {System.out.println("Stack is not Empty");}
+					break;
+				
 				default:
 				
 				System.out.println("OOps Choose Correct Selection");
 				break;
+				
+				
 				
 			}
 			

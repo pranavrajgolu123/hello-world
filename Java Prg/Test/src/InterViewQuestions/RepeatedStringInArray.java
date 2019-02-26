@@ -1,10 +1,19 @@
 package InterViewQuestions;
 
+import java.util.Arrays;
+
 public class RepeatedStringInArray {
 
 	public static void main(String arg[]) {
 		
 		String arr[]= {"a", "b","c","d","a","b","c"};
+		int c=0;
+		int arr1[]={-2, 1, -3, 4, -1, 2, 1, -5, 4};
+		for(int i=0;i<arr1.length;i++){
+		   c= c + (arr1[i]);
+		    }
+		    System.out.println("count:   "+c);
+		    
 		String countarr[]=new String[arr.length];
 		int count=1;
 		int time[]=new int[arr.length];
