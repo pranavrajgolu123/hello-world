@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.ui.HorizontalPanel"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.ui.FlexTable"/>
+<fullyQualifiedTypeName name="com.google.gwt.event.dom.client.KeyDownEvent"/>
+<fullyQualifiedTypeName name="com.google.gwt.event.dom.client.KeyDownHandler"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.Window"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.Timer"/>
+<fullyQualifiedTypeName name="com.google.gwt.i18n.client.NumberFormat"/>
+<fullyQualifiedTypeName name="com.google.gwt.i18n.client.DateTimeFormat"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.Random"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+</qualifiedTypeNameHistroy>
