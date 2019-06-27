@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        cscli=Clusterstorclient.cli:cli
+    
