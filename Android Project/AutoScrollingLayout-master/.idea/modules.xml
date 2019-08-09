@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AutoScrollingLayout-master.iml" filepath="$PROJECT_DIR$/AutoScrollingLayout-master.iml" />
+      <module fileurl="file://D:\Android Project\AutoScrollingLayout-master\DummyScrollingBG.iml" filepath="D:\Android Project\AutoScrollingLayout-master\DummyScrollingBG.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/autoscrollinglayout/autoscrollinglayout.iml" filepath="$PROJECT_DIR$/autoscrollinglayout/autoscrollinglayout.iml" />
+    </modules>
+  </component>
+</project>
