@@ -14,7 +14,7 @@ public class EmailUtil {
 	 * @param session
 	 * @param toEmail
 	 * @param subject
-	 * @param body
+	 * @param body 
 	 */
 	public static void sendEmail(Session session, String toEmail, String subject, String body){
 		try
@@ -50,3 +50,4 @@ public class EmailUtil {
 
 
 }
+// For More Refference https://www.journaldev.com/2532/javamail-example-send-mail-in-java-smtp
